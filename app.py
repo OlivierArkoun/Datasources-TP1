@@ -3,6 +3,7 @@ st.title("Hello world")
 import os
 
 import re
+import logging
 
 code = """<!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-197402995-1"></script>
@@ -20,3 +21,9 @@ with open(a, 'r') as f:
         with open(a, 'w') as f:
             newdata=re.sub('<head>','<head>' + code, data)
             f.write(newdata)
+
+title=st.text_inuput('Movie title','Life of Olive')
+st.write('The current movie title is',title)
+logging.warning('Watch out man')
+logging.info('I told you so')
+
