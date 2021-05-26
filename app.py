@@ -22,7 +22,7 @@ with open(a, 'r') as f:
             newdata=re.sub('<head>','<head>' + code, data)
             f.write(newdata)
 
-title=st.text_inuput('Movie title','Life of Olive')
+title=st.text_input('Movie title',value='Life of Olive')
 st.write('The current movie title is',title)
 logging.warning('Watch out man')
 logging.info('I told you so')
